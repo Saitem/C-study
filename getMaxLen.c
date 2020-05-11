@@ -26,6 +26,8 @@ int main(void) {
 
 int getLine(char s[], int lim) {
     int c, i;
+    char spike[lim];
+
     for(i = 0; i < lim - 1 && (c = getchar()) != EOF && c != '\n'; i++) 
         s[i] = c;
     if(c == 'n') {
@@ -34,6 +36,9 @@ int getLine(char s[], int lim) {
     }
 
     s[i] = '\0';
+
+    if((i == lim - 1) && (s[i - 1] != '\n'))
+        i += getLine(spike, lim);
 
     return i;
 }
