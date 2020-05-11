@@ -19,7 +19,7 @@ int main(void) {
         }
     
     if(max > 0)
-        printf("%s", longest);
+        printf("%s - %d\n", longest, max);
     
     return 0;
 }
