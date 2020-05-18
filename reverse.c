@@ -14,6 +14,8 @@ int main() {
             printf("%c", line[i]);
      
     }
+    
+    return 0;
 }
 
 int getLine(char s[], int lim) {
